@@ -1,0 +1,289 @@
+@import 'src/Style/variables';
+@import 'fonts/sl_icons.css';
+
+@mixin LinkBauble {
+  height: 42px;
+  width: 42px;
+  background-color: $extremely-light-grey;
+
+  border: 2px $light-grey solid;
+  border-radius: 50%;
+
+  margin: 0 10px;
+  @include mobile {
+    margin: 0 5px;
+  }
+
+  &:before {
+    color: $black;
+    opacity: 0.3;
+    margin-top: 12.5px;
+    margin-left: 12.5px;
+  }
+
+  &:visited {
+    &:before {
+      color: $white;
+    }
+  }
+
+  &:hover {
+    &:before {
+      color: $white;
+      opacity: 1;
+    }
+  }
+}
+
+.Newsletter {
+  margin-top: 135px;
+  margin-left: 100px;
+  @include mobile {
+    max-width: 335px;
+    max-height: 371px;
+    margin: 187px 20px;
+
+    padding: 14px 20px 0 20px;
+
+    background: linear-gradient(180deg, $white 0%, $extremely-light-grey 100%);
+  }
+
+  &-Heading {
+    margin-left: 40px;
+
+    &-Success {
+      margin-left: 40px;
+      margin-top: -125px;
+      max-width: 400px;
+
+      @include desktop {
+        h1 {
+          margin-bottom: 22px;
+        }
+      }
+
+      @include mobile {
+        margin-top: 19px;
+        margin-left: 0;
+        padding-bottom: 22px;
+      }
+
+      border-bottom: 1px solid $light-grey;
+      .Success-Icon {
+        margin-bottom: 30px;
+        content: url("icons/ic_success.svg");
+
+        @include mobile {
+          margin-bottom: 35px;
+        }
+      }
+    }
+
+    @include mobile {
+      margin: 0;
+    }
+  }
+
+  .Subheading {
+    margin-bottom: 48px;
+    width: 400px;
+
+    @include mobile {
+      width: unset;
+      margin-bottom: 20px;
+    }
+  }
+
+  form {
+    .EmailInput {
+      height: 70px;
+      width: 618px;
+
+      border: 1px solid $light-grey;
+      padding-left: 40px;
+
+      @include mobile {
+        height: 56px;
+        width: 273px;
+
+        padding-left: 15px;
+      }
+
+      &-Container {
+        display: flex;
+        flex-direction: row;
+        width: 663px;
+        margin: 48px 0 54px 0 ;
+
+        @include mobile {
+          width: unset;
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+
+        &:before {
+          width: 4px;
+          content: "";
+          background-color: $blue;
+        }
+      }
+
+      &-Error {
+        position: relative;
+        top: -50px;
+        margin: 0;
+        height: 0;
+        color:red;
+      }
+
+      &::placeholder {
+        font-size: 16px;
+        margin: 18px 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+    .icon-ic_arrow {
+      color: $black;
+      opacity: 0.3;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 0;
+      width: 0;
+      font-size: 15px;
+      margin-left: -66px;
+      margin-top: -1px;
+
+      @include mobile {
+        margin-left: -40px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:before {
+        width: 24px;
+        height: 14px;
+      }
+    }
+
+    .TermsOfService {
+      display: flex;
+      padding-bottom: 50px;
+      margin-left: 40px;
+      width: 400px;
+      border-bottom: 1px solid $light-grey;
+      @include mobile {
+        width: unset;
+        padding: unset;
+        margin: unset;
+        padding-bottom: 20px;
+      }
+      &-Label {
+        margin-top: 4px;
+        margin-left: 15px;
+      }
+      &-Link {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      &-Checkbox {
+        -webkit-appearance: none;
+        background-color: $white;
+        border: 1px solid $light-grey;
+        padding: 9px;
+        margin: 0;
+        border-radius: 3px;
+        display: inline-block;
+        position: relative;
+        height: 26px;
+        width: 26px;
+        &:checked {
+          background-color: $blue;
+        }
+        &:checked:after {
+          content: '\2714';
+          color: $white;
+          font-size: 14px;
+          position: absolute;
+          top: 2px;
+          left: 6px;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+ .SocialLinks {
+   display: flex;
+   margin-top: 50px;
+   margin-left: 108px;
+
+   @include mobile {
+     margin-top: 22px;
+     margin-left: 29px;
+     padding-bottom: 30px;
+   }
+
+    .icon{
+      @include LinkBauble;
+
+      &-ic_facebook {
+        &:hover {
+          background-color: $facebook-onHover;
+        }
+        &:visited {
+          background-color: $facebook-visited;
+        }
+      }
+
+      &-ic_instagram {
+        &:hover {
+          background-color: $instagram-onHover;
+        }
+        &:visited {
+          background-color: $instagram-visited;
+        }
+      }
+
+      &-ic_twitter {
+        &:before {
+          font-size: 13px;
+          margin-top: 15px;
+        }
+        &:hover {
+          background-color: $twitter-onHover;
+        }
+        &:visited {
+          background-color: $twitter-visited;
+        }
+      }
+
+      &-ic_youtube {
+        &:before {
+          font-size: 12px;
+          margin-top: 15px;
+
+          @include mobile {
+            font-size: 11px;
+            margin-top: 15px;
+          }
+        }
+        &:hover {
+          background-color: $youtube-onHover;
+        }
+        &:visited {
+          background-color: $youtube-visited;
+        }
+      }
+    }
+
+
+ }
+}

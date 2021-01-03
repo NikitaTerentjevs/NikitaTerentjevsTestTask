@@ -1,0 +1,34 @@
+@import 'src/Style/variables';
+
+.HomePage {
+  background-image: url("pictures/image_summer.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  max-height: 1080px;
+  max-width: 1920px;
+  height: 100%;
+  margin: auto;
+
+  @include mobile {
+    background-position: -350px 0px;
+    background-size: 1000px 800px;
+
+    max-width: 425px;
+    height: 812px;
+    margin: 0;
+  }
+
+  &-Content {
+    background: linear-gradient(180deg, $white 0%, $extremely-light-grey 100%);;
+    max-width: 680px;
+    height: 1080px;
+
+    @include mobile {
+      max-width: unset;
+      height: unset;
+      background: unset;
+      margin: 0 auto;
+    }
+  }
+
+}

@@ -1,0 +1,37 @@
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: Arial, serif;
+
+  h1 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 15px;
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 5px;
+    }
+  }
+  p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: $grey;
+
+    @include mobile {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 26px;
+      margin-top: 10px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}

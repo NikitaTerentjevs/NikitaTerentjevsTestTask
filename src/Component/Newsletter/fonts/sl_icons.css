@@ -1,0 +1,41 @@
+/*
+Font for Social links icons has been made on Fontello.com
+*/
+
+
+@font-face {
+  font-family: 'sl_icons';
+  src: url('sl_icons.eot?13205334');
+  src: url('sl_icons.eot?13205334#iefix') format('embedded-opentype'),
+       url('sl_icons.woff2?13205334') format('woff2'),
+       url('sl_icons.woff?13205334') format('woff'),
+       url('sl_icons.ttf?13205334') format('truetype'),
+       url('sl_icons.svg?13205334#sl_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "sl_icons";
+  font-style: normal;
+  font-weight: normal;
+ 
+  display: inline-block;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+
+  font-variant: normal;
+  text-transform: none;
+
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+ 
+.icon-ic_arrow:before { content: '\e800'; } /* '' */
+.icon-ic_facebook:before { content: '\e801'; } /* '' */
+.icon-ic_instagram:before { content: '\e802'; } /* '' */
+.icon-ic_twitter:before { content: '\e803'; } /* '' */
+.icon-ic_youtube:before { content: '\e804'; } /* '' */

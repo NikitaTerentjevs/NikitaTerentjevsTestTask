@@ -1,0 +1,39 @@
+//Colors
+$blue: #4066A5;
+$black: #131821;
+$grey: #6A707B;
+$light-grey: #E3E3E4;
+$extremely-light-grey: #F2F5FA;
+$white: #FFFFFF;
+
+//Social Links Colors - on Hover
+$facebook-onHover: #4267B2;
+$instagram-onHover: #C13584;
+$twitter-onHover: #1DA1F2;
+$youtube-onHover: #FF0000;
+
+//Social Links Colors - Pressed
+$facebook-visited: #2F4A80;
+$instagram-visited: #8F2762;
+$twitter-visited: #177FBF;
+$youtube-visited: #CC0000;
+
+//Media Queries
+
+@mixin desktop {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin after-desktop {
+  @media (min-width: 426px) and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width:425px) {
+    @content;
+  }
+}
